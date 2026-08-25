@@ -1,2 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using UAMS.Models;
+using UAMS.UserInterface;
+using MySql.Data.MySqlClient;
+
+namespace UAMS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+        }
+    }
+}
