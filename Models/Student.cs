@@ -1,9 +1,13 @@
 using MySql.Data.MySqlClient;
+using UAMS.Models;
+using UAMS.UserInterface;
+using UAMS.Utilities;
 
 namespace UAMS.Models
 {
     public class Student
     {
+        public static List<Student> AllStudents = new List<Student>();
         private int StudentID { get; set; }
         private string StudentName { get; set; }
         private string FatherName { get; set; }
@@ -84,6 +88,18 @@ namespace UAMS.Models
             this.FscMarks = FscMarks;
             this.TestMarks = TestMarks;
             Aggregate = CalcAgg(MatricMarks, FscMarks, TestMarks);
+        }
+        public Student(string StudentName, string FatherName, string CNIC, int MatricMarks, int FscMarks, int TestMarks, Degree degree, List<Degree> Preferences)
+        {
+            this.StudentName = StudentName;
+            this.FatherName = FatherName;
+            this.CNIC = CNIC;
+            this.MatricMarks = MatricMarks;
+            this.FscMarks = FscMarks;
+            this.TestMarks = TestMarks;
+            Aggregate = CalcAgg(MatricMarks, FscMarks, TestMarks);
+            this.degree = degree;
+            this.Preferences = Preferences;
 
         }
 

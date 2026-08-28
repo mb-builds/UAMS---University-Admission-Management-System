@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D5l4pDGYsys=",
+  "dgSpecHash": "RIdV/SqDpfA=",
   "success": true,
-  "projectFilePath": "/run/media/bilal/AECC0322CC02E485/My folder/My projects/C# Projects/UAMS/UAMS.csproj",
+  "projectFilePath": "/run/media/bilal/Shared/My folder/My projects/C# Projects/UAMS/UAMS.csproj",
   "expectedPackageFiles": [
     "/home/bilal/.nuget/packages/bouncycastle.cryptography/2.6.2/bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "/home/bilal/.nuget/packages/google.protobuf/3.35.0/google.protobuf.3.35.0.nupkg.sha512",

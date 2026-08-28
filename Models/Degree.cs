@@ -1,9 +1,14 @@
 using MySql.Data.MySqlClient;
+using UAMS.Models;
+using UAMS.UserInterface;
+using UAMS.Utilities;
+
 
 namespace UAMS.Models
 {
     public class Degree
     {
+        public static List<Degree> AllDegrees = new List<Degree>();
         private int DegreeID {get; set;}
         private string DegreeName {get; set;}
         private int MaxCreditHours {get; set;}
@@ -31,6 +36,13 @@ namespace UAMS.Models
         {
             get { return Subjects; }
             set { Subjects = value; }
+        }
+
+        public Degree(string DegreeName, int MaxCreditHours, List<Subject> Subjects)
+        {
+            this.DegreeName = DegreeName;
+            this.MaxCreditHours = MaxCreditHours;
+            this.Subjects = Subjects;
         }
 
     }

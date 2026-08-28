@@ -1,6 +1,8 @@
-﻿using UAMS.Models;
+﻿using MySql.Data.MySqlClient;
+using UAMS.Models;
 using UAMS.UserInterface;
-using MySql.Data.MySqlClient;
+using UAMS.Utilities;
+
 
 namespace UAMS
 {
@@ -8,7 +10,8 @@ namespace UAMS
     {
         static void Main(string[] args)
         {
-            
+            Degree d = DegreeUI.TakeInputForDegree();
+            DegreeUI.PrintDegreeInfo(d);
         }
     }
 }

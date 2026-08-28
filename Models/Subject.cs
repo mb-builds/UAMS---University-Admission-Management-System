@@ -6,7 +6,7 @@ namespace UAMS.Models
     {
         private int SubjectID {get; set;}
         private string SubjectName {get; set;}
-        private string CreditHours {get; set;}
+        private int CreditHours {get; set;}
 
         public int subjectID
         {
@@ -20,10 +20,16 @@ namespace UAMS.Models
             set { SubjectName = value; }
         }
 
-        public string creditHours
+        public int creditHours
         {
             get { return CreditHours; }
             set { CreditHours = value; }
+        }
+
+        public Subject(string SubjectName, int CreditHours)
+        {
+            this.SubjectName = SubjectName;
+            this.CreditHours = CreditHours;
         }
     }
 }
