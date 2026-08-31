@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using UAMS.DataLayer;
 using UAMS.Models;
 using UAMS.UserInterface;
 using UAMS.Utilities;
@@ -10,8 +11,7 @@ namespace UAMS
     {
         static void Main(string[] args)
         {
-            Degree d = DegreeUI.TakeInputForDegree();
-            DegreeUI.PrintDegreeInfo(d);
+            UserUI.SignIn();
         }
     }
 }

@@ -5,9 +5,9 @@ using UAMS.Utilities;
 
 namespace UAMS.DataLayer
 {
-    public class DegreeDL
+    public class UserDL
     {
-        public static void SaveDegreeToDataBase(Degree d)
+        public static void SaveUserToDataBase(User u)
         {
             DotNetEnv.Env.Load();
             string ConnectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
@@ -15,17 +15,18 @@ namespace UAMS.DataLayer
             using (MySqlConnection Connection = new MySqlConnection(ConnectionString))
             {
                 Connection.Open();
-                string query = "INSERT INTO Degree(DegreeName, MaxCreditHours) Values (@DegreeName, @MaxCreditHours)";
+                string query = "INSERT INTO Users(Username, Password, Role) Values (@Username, @Password, @Role)";
                 using (MySqlCommand command = new MySqlCommand(query, Connection))
                 {
-                    command.Parameters.AddWithValue("@DegreeName", d.degreeName);
-                    command.Parameters.AddWithValue("@MaxCreditHours", d.maxCreditHours);
+                    command.Parameters.AddWithValue("@Username", u.username);
+                    command.Parameters.AddWithValue("@Password", u.password);
+                    command.Parameters.AddWithValue("@Role", u.role);
 
                     command.ExecuteNonQuery();
                 }
             }
 
-            Console.WriteLine("Degree Added Successfully");
+            Console.WriteLine("User Added Successfully");
         }
     }
 }
