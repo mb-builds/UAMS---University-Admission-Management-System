@@ -105,8 +105,13 @@ namespace UAMS.Models
 
         public static double CalcAgg(int Matric, int FSC, int Test)
         {
-            double Aggregate = (0.17 * ((Matric/1100)* 100)) + (0.50 * ((FSC/1200)* 100)) + (0.33 * ((Test/400)* 100));
+            double Aggregate = (0.17 * ((Matric/1100.0)* 100)) + (0.50 * ((FSC/1200.0)* 100)) + (0.33 * ((Test/400.0)* 100));
             return Aggregate;
+        }
+
+        public Student()
+        {
+            
         }
     }
 }

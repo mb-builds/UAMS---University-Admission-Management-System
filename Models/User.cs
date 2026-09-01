@@ -42,5 +42,10 @@ namespace UAMS.Models
             this.Password = Password;
             this.Role = Role;
         }
+
+        public User()
+        {
+            
+        }
     }
 }

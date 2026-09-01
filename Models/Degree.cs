@@ -45,5 +45,10 @@ namespace UAMS.Models
             this.Subjects = Subjects;
         }
 
+        public Degree()
+        {
+            
+        }
+
     }
 }

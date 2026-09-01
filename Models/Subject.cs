@@ -31,5 +31,10 @@ namespace UAMS.Models
             this.SubjectName = SubjectName;
             this.CreditHours = CreditHours;
         }
+
+        public Subject()
+        {
+            
+        }
     }
 }

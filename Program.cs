@@ -11,7 +11,7 @@ namespace UAMS
     {
         static void Main(string[] args)
         {
-            UserUI.SignIn();
+            
         }
     }
 }
